@@ -4,11 +4,11 @@ DbUp is a .NET library that helps you deploy changes to SQL Server database. It 
 ## Getting Started
 Clone the repo and cd into the Docker directory with the .developer area. Issue `docker-compose up`, this will pull the required images and start up the configured services. At this point you should be able to connect to the PostgreSQL database using your RDBMS client of choice, I've used [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/) which is part of my licence.
 
-![pulling the required images](.doc\docker-compose_up_pulling.png)
+![pulling the required images](\.doc\docker-compose_up_pulling.png)
 
 Once the images have been pulled, then new containers will be created based on those images following the instructions in the docker-compose.yml file.
 
-![starting the infrastructure](.doc\docker-compose_up_started.png)
+![starting the infrastructure](\.doc\docker-compose_up_started.png)
 
 At this point it will be possible to connect to the PostgreSQL database which has been created and is hosted on port 5432. You will also be able to navigate to [http://localhost:5341](seq). I've included some instructions as to how you can connect to PostgreSQL using [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/), if you are using a different tool, please refer to it's help.
 
