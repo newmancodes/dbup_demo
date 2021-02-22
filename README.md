@@ -4,22 +4,22 @@ DbUp is a .NET library that helps you deploy changes to SQL Server database. It 
 ## Getting Started
 Clone the repo and cd into the Docker directory with the .developer area. Issue `docker-compose up`, this will pull the required images and start up the configured services. At this point you should be able to connect to the PostgreSQL database using your RDBMS client of choice, I've used [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/) which is part of my licence.
 
-![pulling the required images](\.doc\docker-compose_up_pulling.png)
+![pulling the required images](.doc/docker-compose_up_pulling.png)
 
 Once the images have been pulled, then new containers will be created based on those images following the instructions in the docker-compose.yml file.
 
-![starting the infrastructure](\.doc\docker-compose_up_started.png)
+![starting the infrastructure](.doc/docker-compose_up_started.png)
 
 At this point it will be possible to connect to the PostgreSQL database which has been created and is hosted on port 5432. You will also be able to navigate to [http://localhost:5341](seq). I've included some instructions as to how you can connect to PostgreSQL using [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/), if you are using a different tool, please refer to it's help.
 
 First step is to add a new PostgreSQL Data Source which you can find via the + icon in the Database pane.
-![adding the database connection](.doc\datagrip_add_database_connection.png)
+![adding the database connection](.doc/datagrip_add_database_connection.png)
 
 Using the username, password, and database values from the docker-compose.yml file, you can configure the data source, and click the "Test Connection" to ensure that the details are correct. Once done, click the OK button.
-![specifying the database connection details](.doc\datagrip_add_database_connection_details.png)
+![specifying the database connection details](.doc/datagrip_add_database_connection_details.png)
 
 Our database doesn't have any interesting data in it yet though, for that we need to start the application. Run the solution with web project as the start up project. Take a look at the output in [http://localhost:5341](seq). Note that the application has started up and located four scripts.
-![seq first run output](.doc\seq_first_run_output.png)
+![seq first run output](.doc/seq_first_run_output.png)
 
 - Script0001.sql configures the base schema, along with initial tables
 - Script0002.sql inserts some base data
@@ -27,17 +27,17 @@ Our database doesn't have any interesting data in it yet though, for that we nee
 - Script0004.sql inserts some additional data
 
 Notice how the scripts executed are naturally sortable and are processed in that order. Let's take a look and see what's in the database. To do that we need to configure some more options in DataGrip. First we need to opt into seeing our dbupdemo schema, this is done via the "Manage Shown Schemas..." Database Tool.
-![datagrip configure shown schemas](.doc\datagrip_manage_shown_schemas.png)
-![datagrip specify the new schema](.doc\datagrip_add_dbupdemo.png)
+![datagrip configure shown schemas](.doc/datagrip_manage_shown_schemas.png)
+![datagrip specify the new schema](.doc/datagrip_add_dbupdemo.png)
 
 Once that is done, you may need to refresh your Database pane, we can then create a new Query Console.
-![datagrip create new query console](.doc\datagrip_new_query_console.png)
+![datagrip create new query console](.doc/datagrip_new_query_console.png)
 
 This allows us to query the table we've created and see that data that has been created.
-![datagrip initial data](.doc\datagrip_initial_data.png)
+![datagrip initial data](.doc/datagrip_initial_data.png)
 
 If you query the schemaversions table from the public schema, you will see which scripts were run and when.
-![datagrip initial schema versions](.doc\datagrip_initial_schema_versions.png)
+![datagrip initial schema versions](.doc/datagrip_initial_schema_versions.png)
 
 But there is a problem, we have a typo in our data, the `Sixtth Interesting Thing` is misspelt. Let's correct that.
 
