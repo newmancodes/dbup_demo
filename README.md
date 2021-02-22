@@ -10,7 +10,7 @@ Once the images have been pulled, then new containers will be created based on t
 
 ![starting the infrastructure](.doc/docker-compose_up_started.png)
 
-At this point it will be possible to connect to the PostgreSQL database which has been created and is hosted on port 5432. You will also be able to navigate to [http://localhost:5341](seq). I've included some instructions as to how you can connect to PostgreSQL using [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/), if you are using a different tool, please refer to it's help.
+At this point it will be possible to connect to the PostgreSQL database which has been created and is hosted on port 5432. You will also be able to navigate to [seq](http://localhost:5341). I've included some instructions as to how you can connect to PostgreSQL using [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/), if you are using a different tool, please refer to it's help.
 
 First step is to add a new PostgreSQL Data Source which you can find via the + icon in the Database pane.
 ![adding the database connection](.doc/datagrip_add_database_connection.png)
@@ -18,7 +18,7 @@ First step is to add a new PostgreSQL Data Source which you can find via the + i
 Using the username, password, and database values from the docker-compose.yml file, you can configure the data source, and click the "Test Connection" to ensure that the details are correct. Once done, click the OK button.
 ![specifying the database connection details](.doc/datagrip_add_database_connection_details.png)
 
-Our database doesn't have any interesting data in it yet though, for that we need to start the application. Run the solution with web project as the start up project. Take a look at the output in [http://localhost:5341](seq). Note that the application has started up and located four scripts.
+Our database doesn't have any interesting data in it yet though, for that we need to start the application. Run the solution with web project as the start up project. Take a look at the output in [seq](http://localhost:5341). Note that the application has started up and located four scripts.
 ![seq first run output](.doc/seq_first_run_output.png)
 
 - Script0001.sql configures the base schema, along with initial tables
