@@ -16,6 +16,7 @@
     <None Remove="Migrations\Script0002.sql" />
     <None Remove="Migrations\Script0003_Testdata.sql" />
     <None Remove="Migrations\Script0004.sql" />
+    <None Remove="Migrations\Script0005.sql" />
     <None Remove="Migrations\Script0050.sql" />
     <None Remove="Migrations\Script0051_Testdata.sql" />
     <None Remove="Migrations\Script0052.sql" />
@@ -26,6 +27,7 @@
     <EmbeddedResource Include="Migrations\Script0002.sql" />
     <EmbeddedResource Include="Migrations\Script0003_Testdata.sql" />
     <EmbeddedResource Include="Migrations\Script0004.sql" />
+    <EmbeddedResource Include="Migrations\Script0005.sql" />
   </ItemGroup>
 
   <ItemGroup>

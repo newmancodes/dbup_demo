@@ -24,9 +24,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".standards", ".standards", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbUpDemo.Web", "src\DbUpDemo.Web\DbUpDemo.Web.csproj", "{9D212C13-FFF7-46EF-9400-BAC32E237025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbUpDemo.Domain", "src\DbUpDemo.Domain\DbUpDemo.Domain.csproj", "{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbUpDemo.Domain", "src\DbUpDemo.Domain\DbUpDemo.Domain.csproj", "{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbUpDemo.Infrastructure.Postgres", "src\DbUpDemo.Infrastructure.Postgres\DbUpDemo.Infrastructure.Postgres.csproj", "{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbUpDemo.Infrastructure.Postgres", "src\DbUpDemo.Infrastructure.Postgres\DbUpDemo.Infrastructure.Postgres.csproj", "{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{B6A18CE1-FB15-4462-9305-CF9C448D9417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{7180C552-8A99-4DF9-8441-B60DF6450031}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +62,7 @@ Global
 		{9D212C13-FFF7-46EF-9400-BAC32E237025} = {BF5A2F89-5071-4361-A828-CFD6DA647F20}
 		{A1715769-B17D-4B05-AF86-2C1A85AAFB0F} = {BF5A2F89-5071-4361-A828-CFD6DA647F20}
 		{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB} = {BF5A2F89-5071-4361-A828-CFD6DA647F20}
+		{7180C552-8A99-4DF9-8441-B60DF6450031} = {B6A18CE1-FB15-4462-9305-CF9C448D9417}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5EA84BE-D5DE-495B-BA1A-EE1B9249612D}
