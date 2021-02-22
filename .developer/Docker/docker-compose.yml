@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres:13.2
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dbup_demo_u
+      POSTGRES_PASSWORD: dbup_demo_pw
+      POSTGRES_DB: dbup_demo
+  seq:
+    image: datalust/seq:2021.1
+    ports:
+      - "5341:80"
+    environment:
+      - ACCEPT_EULA=Y

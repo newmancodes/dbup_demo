@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\.standards\minimum.ruleset</CodeAnalysisRuleSet>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1701;1702;1591;1402</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Migrations\Script0001.sql" />
+    <None Remove="Migrations\Script0050.sql" />
+    <None Remove="Migrations\Script0051_Testdata.sql" />
+    <None Remove="Migrations\Script0052.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\Script0001.sql" />
+    <EmbeddedResource Include="Migrations\Script0050.sql" />
+    <EmbeddedResource Include="Migrations\Script0051_Testdata.sql" />
+    <EmbeddedResource Include="Migrations\Script0052.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-postgresql" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DbUpDemo.Domain\DbUpDemo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

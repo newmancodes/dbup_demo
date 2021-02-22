@@ -1,2 +1,5 @@
-# dbup_demo
-Quick demo to illustrate DbUp
+# DbUp Demo
+DbUp is a .NET library that helps you deploy changes to SQL Server database. It tracks which SQL scripts have been run already, and runs the change scripts that are needed to get your database up to date. There is support for a variety of database platforms, including PostgreSQL. There is a good amount of documentation available at [https://dbup.readthedocs.io/en/latest/](https://dbup.readthedocs.io/en/latest/) and hopefully this project will show a little bit of what is possible in a form that meets our idioms.
+
+## Getting Started
+Clone the repo and cd into the Docker directory with the .developer area. Issue `docker-compose up`, this will pull the required images and start up the configured services. At this point you should be able to connect to the PostgreSQL database using your RDBMS client of choice, I've used [JetBrains' DataGrip](https://www.jetbrains.com/datagrip/) which is part of my licence.

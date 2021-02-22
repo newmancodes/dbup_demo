@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BF5A2F89-5071-4361-A828-CFD6DA647F20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".developer", ".developer", "{6CDE7124-5B08-4EB0-8675-8998551C9BD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{3116B84B-EA32-4E2E-BF7C-2D02C0622F68}"
+	ProjectSection(SolutionItems) = preProject
+		.developer\Docker\docker-compose.yml = .developer\Docker\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC23EFCD-B9ED-43DD-9E7F-C17F7DD6CF80}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".standards", ".standards", "{C115AD96-3EC4-49A9-A89F-0A1FF0FC28D3}"
+	ProjectSection(SolutionItems) = preProject
+		.standards\minimum.ruleset = .standards\minimum.ruleset
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbUpDemo.Web", "src\DbUpDemo.Web\DbUpDemo.Web.csproj", "{9D212C13-FFF7-46EF-9400-BAC32E237025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbUpDemo.Domain", "src\DbUpDemo.Domain\DbUpDemo.Domain.csproj", "{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbUpDemo.Infrastructure.Postgres", "src\DbUpDemo.Infrastructure.Postgres\DbUpDemo.Infrastructure.Postgres.csproj", "{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D212C13-FFF7-46EF-9400-BAC32E237025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D212C13-FFF7-46EF-9400-BAC32E237025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D212C13-FFF7-46EF-9400-BAC32E237025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D212C13-FFF7-46EF-9400-BAC32E237025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1715769-B17D-4B05-AF86-2C1A85AAFB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3116B84B-EA32-4E2E-BF7C-2D02C0622F68} = {6CDE7124-5B08-4EB0-8675-8998551C9BD1}
+		{9D212C13-FFF7-46EF-9400-BAC32E237025} = {BF5A2F89-5071-4361-A828-CFD6DA647F20}
+		{A1715769-B17D-4B05-AF86-2C1A85AAFB0F} = {BF5A2F89-5071-4361-A828-CFD6DA647F20}
+		{8FB38C1A-DFBE-411A-AFFC-18F3ED192FEB} = {BF5A2F89-5071-4361-A828-CFD6DA647F20}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5EA84BE-D5DE-495B-BA1A-EE1B9249612D}
+	EndGlobalSection
+EndGlobal
