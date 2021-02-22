@@ -47,17 +47,17 @@ From this setup, we can see that there are several important pieces of informati
 - The scripts are applied one after the other based on their naturally sorted order
 - The public.schemaversions table is consulted upon application start up and any script which has not been executed will be executed
 
-Because the public.schemaversions table maintains a log of which scripts have been executed, it is **very** important that the scripts be considered [immutable](https://dictionary.cambridge.org/dictionary/english/immutable) so that we have a consistent deployment mechanism of the baseline dataset. If we were to simple open the `Script_0004.sql` file and amend it, then environments which had not received that file would receive the fixed version, but other environments would be left with `Sixtth...` as the public.schemaversions table will have recorded the fact that that script has been executed.
+Because the public.schemaversions table maintains a log of which scripts have been executed, it is **very** important that the scripts be considered [immutable](https://dictionary.cambridge.org/dictionary/english/immutable) so that we have a consistent deployment mechanism of the baseline dataset. If we were to simply open the `Script_0004.sql` file and amend it, then environments which had not received that file would receive the fixed version, but other environments would be left with `Sixtth...` as the public.schemaversions table will have recorded the fact that that script has been executed.
 
 To fix this, we must add another scripts to our solution. To ensure they are run in the correct order, we need to:
 
-- Add `Script_0005.sql` alongside the other scripts
+- Add `Script0005.sql` alongside the other scripts
 - Mark it as an embedded resource (so DbUp can locate it)
 - Perform the necessary update
 
 Feel free to try this and run the application again in order to check that the appropriate change has been made. Feel free to compare with the `feature/add-script-5` branch in the github repo.
 
 ## Behind the curtain
-Within the DbUpDemo.Infrastructure.Postgres project you should find a `Migrations` folder containing the `Scaffold.cs` file. This includes a class which is called during application startup. This class determins where to find scripts and which should be considered for execution. As we have a need to have some scripts excluded from production environments, we have specified a filter which will inspect each Embedded Resource name and only allow the correct ones through for certain environments. This includes an example as to how that can be done, specifics that fit with your needs can be applied.
+Within the DbUpDemo.Infrastructure.Postgres project you should find a `Migrations` folder containing the `Scaffold.cs` file. This includes a class which is called during application startup. This class determines where to find scripts and which should be considered for execution. As we have a need to have some scripts excluded from production environments, we have specified a filter which will inspect each Embedded Resource name and only allow the correct ones through for certain environments. This includes an example as to how that can be done, specifics that fit with your needs can be applied.
 
 The other important thing to consider is how to manage multiple application starting up _at the same time_. PostgreSQL does have a feature called [advisory locks](https://vladmihalcea.com/how-do-postgresql-advisory-locks-work/) which look promising in this area. Consult with our database experts and agree a way forward which they are comfortable with. I have applied `pg_advisory_xact_lock` in this example application.
